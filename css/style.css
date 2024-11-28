@@ -5,6 +5,13 @@
   box-sizing: border-box;
 }
 
+/* フォントとカラーパレット */
+body {
+  font-family: Arial, sans-serif;
+  color: #333;
+  background-color: #f4f4f4;
+}
+
 /* ナビゲーションバー */
 .navbar {
   display: flex;
@@ -14,13 +21,11 @@
   background-color: #333;
 }
 
-/* ロゴ */
 .navbar .logo {
   font-size: 1.8em;
   color: white;
 }
 
-/* ナビゲーションリンク */
 .nav-links {
   list-style: none;
   display: flex;
@@ -36,7 +41,6 @@
   font-size: 1.1em;
 }
 
-/* ハンバーガーメニューアイコン */
 .hamburger {
   display: none;
   flex-direction: column;
@@ -50,9 +54,7 @@
   margin: 4px 0;
 }
 
-/* レスポンシブデザイン - モバイルでのスタイル */
 @media (max-width: 768px) {
-  /* メニューは初期状態で非表示 */
   .nav-links {
     display: none;
     position: absolute;
@@ -63,21 +65,110 @@
     text-align: center;
   }
 
-  /* メニューアイテムのスタイル */
   .nav-links li {
     margin: 20px 0;
   }
 
-  /* ハンバーガーメニューアイコンは表示 */
   .hamburger {
     display: flex;
   }
 
-  /* メニューが開いた時の表示 */
   .nav-links.active {
     display: block;
   }
 }
+
+/* ヒーローセクション（トップ画像） */
+.hero {
+  position: relative;
+  height: 100vh;
+  background-image: url('images/hero-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hero-content {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.hero h1 {
+  font-size: 3em;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+
+.cta-btn {
+  background-color: #ff5722;
+  padding: 10px 20px;
+  color: white;
+  text-decoration: none;
+  font-size: 1.1em;
+  border-radius: 5px;
+}
+
+.cta-btn:hover {
+  background-color: #e64a19;
+}
+
+/* 特徴セクション */
+.features {
+  display: flex;
+  justify-content: space-around;
+  margin: 40px 0;
+  padding: 0 20px;
+}
+
+.feature {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 30%;
+  text-align: center;
+  padding: 20px;
+  transition: transform 0.3s ease;
+}
+
+.feature:hover {
+  transform: translateY(-10px);
+}
+
+.feature-img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.feature h2 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.feature p {
+  font-size: 1em;
+  color: #555;
+}
+
+/* フッター */
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  font-size: 1em;
+}
+
 
 
 
