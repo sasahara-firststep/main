@@ -1,4 +1,3 @@
-/* 基本リセット */
 /* 基本的なリセット */
 * {
   margin: 0;
@@ -51,14 +50,9 @@
   margin: 4px 0;
 }
 
-/* ハンバーガーメニューが開いている状態 */
-.nav-links.active {
-  display: block;
-}
-
 /* レスポンシブデザイン - モバイルでのスタイル */
 @media (max-width: 768px) {
-  /* 通常のメニューは非表示 */
+  /* メニューは初期状態で非表示 */
   .nav-links {
     display: none;
     position: absolute;
@@ -69,7 +63,7 @@
     text-align: center;
   }
 
-  /* リスト項目のスタイル */
+  /* メニューアイテムのスタイル */
   .nav-links li {
     margin: 20px 0;
   }
@@ -78,6 +72,12 @@
   .hamburger {
     display: flex;
   }
+
+  /* メニューが開いた時の表示 */
+  .nav-links.active {
+    display: block;
+  }
 }
+
 
 
