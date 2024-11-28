@@ -1,157 +1,83 @@
 /* 基本リセット */
+/* 基本的なリセット */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-body {
-  font-family: 'Poppins', sans-serif;
-  line-height: 1.6;
-  background-color: #222;
-  color: #fff;
-}
-
-a {
-  text-decoration: none;
-}
-
-h1, h2, h3 {
-  font-family: 'Anton', sans-serif;
-  color: white;
-}
-
-/* ヘッダー */
-.hero {
-  height: 100vh;
-  background-image: url('hero-bg.jpg'); /* 背景画像 */
-  background-size: cover;
-  background-position: center;
-  position: relative;
+/* ナビゲーションバー */
+.navbar {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  text-align: center;
-  overflow: hidden;
-}
-
-.hero-content {
-  color: white;
-  animation: fadeIn 2s ease-out;
-}
-
-.hero h1 {
-  font-size: 4em;
-  text-transform: uppercase;
-  margin-bottom: 20px;
-  animation: fadeInUp 2s ease-out;
-}
-
-.hero p {
-  font-size: 1.5em;
-  margin-bottom: 30px;
-  animation: fadeInUp 2s ease-out 0.5s;
-}
-
-/* クラス紹介ページ */
-.classes {
-  padding: 50px;
-  background-color: #333;
-  text-align: center;
-}
-
-.class-card {
-  background-color: #444;
-  padding: 20px;
-  margin: 20px;
-  border-radius: 10px;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-}
-
-.class-card h3 {
-  margin-bottom: 15px;
-  font-size: 1.8em;
-}
-
-/* 料金案内ページ */
-.pricing {
-  padding: 50px;
-  background-color: #333;
-  text-align: center;
-}
-
-table {
-  width: 100%;
-  margin-top: 30px;
-  border-collapse: collapse;
-}
-
-table th, table td {
-  padding: 15px;
-  border: 1px solid #555;
-  text-align: center;
-}
-
-table th {
-  background-color: #444;
-}
-
-table td {
-  background-color: #333;
-}
-
-/* お問い合わせフォーム */
-.contact {
-  padding: 50px;
-  background-color: #444;
-}
-
-.contact form {
-  max-width: 600px;
-  margin: 0 auto;
-  background-color: #555;
-  padding: 30px;
-  border-radius: 10px;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-}
-
-.contact label {
-  display: block;
-  margin: 10px 0 5px;
-  font-size: 1.1em;
-}
-
-.contact input, .contact textarea {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 20px;
-  background-color: #333;
-  border: 1px solid #555;
-  color: #fff;
-  font-size: 1.1em;
-  border-radius: 5px;
-}
-
-.contact button {
   padding: 10px 20px;
-  background-color: #f44336;
+  background-color: #333;
+}
+
+/* ロゴ */
+.navbar .logo {
+  font-size: 1.8em;
   color: white;
-  font-size: 1.2em;
-  border-radius: 5px;
-  border: none;
+}
+
+/* ナビゲーションリンク */
+.nav-links {
+  list-style: none;
+  display: flex;
+}
+
+.nav-links li {
+  margin: 0 15px;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.1em;
+}
+
+/* ハンバーガーメニューアイコン */
+.hamburger {
+  display: none;
+  flex-direction: column;
   cursor: pointer;
-  transition: background-color 0.3s;
 }
 
-.contact button:hover {
-  background-color: #e53935;
+.hamburger .bar {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 4px 0;
 }
 
-/* フッター */
-footer {
-  background-color: #222;
-  padding: 20px;
-  text-align: center;
-  color: #fff;
+/* ハンバーガーメニューが開いている状態 */
+.nav-links.active {
+  display: block;
 }
+
+/* レスポンシブデザイン - モバイルでのスタイル */
+@media (max-width: 768px) {
+  /* 通常のメニューは非表示 */
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    text-align: center;
+  }
+
+  /* リスト項目のスタイル */
+  .nav-links li {
+    margin: 20px 0;
+  }
+
+  /* ハンバーガーメニューアイコンは表示 */
+  .hamburger {
+    display: flex;
+  }
+}
+
 
