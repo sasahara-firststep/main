@@ -9,14 +9,16 @@ body {
   font-family: 'Poppins', sans-serif;
   line-height: 1.6;
   background-color: #222;
+  color: #fff;
 }
 
 a {
   text-decoration: none;
 }
 
-h1, h2 {
+h1, h2, h3 {
   font-family: 'Anton', sans-serif;
+  color: white;
 }
 
 /* ヘッダー */
@@ -51,129 +53,98 @@ h1, h2 {
   animation: fadeInUp 2s ease-out 0.5s;
 }
 
-.buttons {
-  display: flex;
-  gap: 15px;
-  flex-wrap: wrap;
-  justify-content: center;
-  animation: fadeInUp 2s ease-out 1s;
+/* クラス紹介ページ */
+.classes {
+  padding: 50px;
+  background-color: #333;
+  text-align: center;
 }
 
-.hero .btn {
-  background-color: #f44336;
-  color: #fff;
-  padding: 15px 30px;
-  font-size: 1.2em;
-  border-radius: 5px;
-  transition: background-color 0.3s ease, transform 0.3s ease;
+.class-card {
+  background-color: #444;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 10px;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
 
-.hero .btn:hover {
-  background-color: #e53935;
-  transform: translateY(-5px);
+.class-card h3 {
+  margin-bottom: 15px;
+  font-size: 1.8em;
 }
 
-/* アニメーション */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(50px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* パララックス効果 */
-.hero {
-  position: relative;
-  background-attachment: fixed;
-  background-size: cover;
-}
-
-/* ボタンのアニメーション */
-.fade-in-up {
-  opacity: 0;
-  transform: translateY(20px);
-}
-
-.fade-in-up.visible {
-  opacity: 1;
-  transform: translateY(0);
-  transition: opacity 0.6s ease, transform 0.6s ease;
-}
-
-.fade-in-up.delay-1 {
-  animation-delay: 0.3s;
-}
-
-.fade-in-up.delay-2 {
-  animation-delay: 0.6s;
-}
-
-.fade-in-up.delay-3 {
-  animation-delay: 0.9s;
-}
-
-.fade-in-up.delay-4 {
-  animation-delay: 1.2s;
-}
-
-.fade-in-up.delay-5 {
-  animation-delay: 1.5s;
-}
-
-/* モバイル用レスポンシブ */
-@media (max-width: 768px) {
-  .hero h1 {
-    font-size: 2.5em;
-  }
-
-  .hero p {
-    font-size: 1.2em;
-  }
-
-  .buttons {
-    flex-direction: column;
-  }
-}
-
-/* 共通スタイル (すでに定義済みの部分は省略) */
-
-/* 各子ページのセクションスタイル */
-.about {
-  padding: 50px 20px;
+/* 料金案内ページ */
+.pricing {
+  padding: 50px;
   background-color: #333;
   text-align: center;
-  color: #fff;
 }
 
-.about h2 {
-  font-size: 2.5em;
+table {
+  width: 100%;
+  margin-top: 30px;
+  border-collapse: collapse;
+}
+
+table th, table td {
+  padding: 15px;
+  border: 1px solid #555;
+  text-align: center;
+}
+
+table th {
+  background-color: #444;
+}
+
+table td {
+  background-color: #333;
+}
+
+/* お問い合わせフォーム */
+.contact {
+  padding: 50px;
+  background-color: #444;
+}
+
+.contact form {
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: #555;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.contact label {
+  display: block;
+  margin: 10px 0 5px;
+  font-size: 1.1em;
+}
+
+.contact input, .contact textarea {
+  width: 100%;
+  padding: 10px;
   margin-bottom: 20px;
+  background-color: #333;
+  border: 1px solid #555;
+  color: #fff;
+  font-size: 1.1em;
+  border-radius: 5px;
 }
 
-.about ul {
-  list-style-type: none;
-  padding: 0;
+.contact button {
+  padding: 10px 20px;
+  background-color: #f44336;
+  color: white;
   font-size: 1.2em;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
 }
 
-.about li {
-  margin: 10px 0;
+.contact button:hover {
+  background-color: #e53935;
 }
 
 /* フッター */
@@ -183,3 +154,4 @@ footer {
   text-align: center;
   color: #fff;
 }
+
