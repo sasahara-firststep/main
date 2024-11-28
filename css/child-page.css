@@ -1,63 +1,87 @@
-/* 基本的なリセット */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-/* ボディの設定 */
+/* ベーススタイル */
 body {
   font-family: Arial, sans-serif;
   background-color: #f4f4f4;
+  margin: 0;
+}
+
+h1, h2 {
   color: #333;
-  line-height: 1.6;
+  text-align: center;
 }
 
-/* ヘッダー */
-header {
-  background-color: #333;
-  padding: 10px 20px;
-}
-
-header .logo {
-  font-size: 1.8em;
-  color: white;
-}
-
-/* ナビゲーション */
-.nav-links {
-  list-style: none;
+.hero {
+  background-image: url('images/hero-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 60vh;
   display: flex;
   justify-content: center;
-  padding: 10px 0;
-}
-
-.nav-links li {
-  margin: 0 15px;
-}
-
-.nav-links li a {
-  color: white;
-  text-decoration: none;
-  font-size: 1.1em;
-}
-
-/* コンテンツエリア */
-main {
-  padding: 20px;
-}
-
-h1 {
+  align-items: center;
   text-align: center;
-  margin-bottom: 20px;
-  font-size: 2em;
+  color: white;
 }
 
-p {
-  margin-bottom: 20px;
-  font-size: 1.1em;
+.hero .hero-content h1 {
+  font-size: 3em;
 }
 
+.hero .hero-content p {
+  font-size: 1.5em;
+}
+
+/* ジムの特徴 */
+.about-features {
+  display: flex;
+  justify-content: space-around;
+  margin: 40px 0;
+  padding: 0 20px;
+}
+
+.feature {
+  width: 45%;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  padding: 20px;
+  transition: transform 0.3s ease;
+  opacity: 0;
+}
+
+.feature img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.feature h2 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.feature p {
+  color: #555;
+  font-size: 1em;
+}
+
+.feature:hover {
+  transform: translateY(-10px);
+}
+
+/* AOSのスタイル - フェードイン */
+[data-aos="fade-up"] {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.5s ease;
+}
+
+[data-aos="fade-up"].aos-animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* フッター */
 footer {
   background-color: #333;
   color: white;
