@@ -3,35 +3,64 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ジム紹介 - ボクシングジム</title>
-  <link rel="stylesheet" href="css/child-page.css">
+  <title>ジムについて - ボクシングジム</title>
+  
+  <!-- CSSファイルのリンク -->
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-
   <!-- ヘッダー -->
-  <header class="hero">
-    <div class="hero-content">
-      <h1 class="fade-in-up">ジムについていい</h1>
-      <p class="fade-in-up delay-1">私たちのジムは最先端の設備と充実したトレーニング環境を提供します。</p>
-    </div>
+  <header>
+    <nav class="navbar">
+      <div class="logo">ボクシングジム</div>
+      <div class="hamburger" id="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">ホーム</a></li>
+        <li><a href="about.html">ジムについて</a></li>
+        <li><a href="classes.html">クラス紹介</a></li>
+        <li><a href="pricing.html">料金案内</a></li>
+        <li><a href="contact.html">お問い合わせ</a></li>
+      </ul>
+    </nav>
   </header>
 
-  <!-- ジムの特徴 -->
-  <section class="about">
-    <h2>ジムの特徴</h2>
-    <p>最新のトレーニング設備、サポートが充実したトレーナー陣、そして快適なトレーニング環境。</p>
-    <ul>
-      <li>高性能トレーニングマシン</li>
-      <li>広々としたリングエリア</li>
-      <li>ボクシングの基本から応用までカバーするプログラム</li>
-      <li>個別指導とグループクラス</li>
-    </ul>
+  <!-- ヒーローセクション -->
+  <section class="hero about-hero">
+    <div class="hero-content">
+      <h1>ジムについて</h1>
+      <p>私たちのボクシングジムでトレーニングを始めましょう。</p>
+    </div>
   </section>
 
+  <!-- ジムの特徴 -->
+  <section class="about-features">
+    <div class="feature" data-aos="fade-up">
+      <img src="images/feature1.jpg" alt="トレーニング">
+      <h2>最新のトレーニング設備</h2>
+      <p>当ジムは最先端のトレーニング設備を完備しています。</p>
+    </div>
+    <div class="feature" data-aos="fade-up">
+      <img src="images/feature2.jpg" alt="プロのコーチ">
+      <h2>経験豊富なコーチ陣</h2>
+      <p>プロのボクサーや経験豊富なコーチが指導します。</p>
+    </div>
+  </section>
+
+  <!-- フッター -->
   <footer>
-    <p>© 2024 ボクシングジム</p>
+    <p>&copy; 2024 ボクシングジム All Rights Reserved.</p>
   </footer>
 
-  <script src="js/scripts.js"></script>
+  <!-- JavaScriptファイルのリンク -->
+  <script src="js/main.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init(); // AOSライブラリを初期化
+  </script>
 </body>
 </html>
+
