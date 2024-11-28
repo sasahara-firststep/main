@@ -150,3 +150,36 @@ h1, h2 {
     flex-direction: column;
   }
 }
+
+/* 共通スタイル (すでに定義済みの部分は省略) */
+
+/* 各子ページのセクションスタイル */
+.about {
+  padding: 50px 20px;
+  background-color: #333;
+  text-align: center;
+  color: #fff;
+}
+
+.about h2 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+.about ul {
+  list-style-type: none;
+  padding: 0;
+  font-size: 1.2em;
+}
+
+.about li {
+  margin: 10px 0;
+}
+
+/* フッター */
+footer {
+  background-color: #222;
+  padding: 20px;
+  text-align: center;
+  color: #fff;
+}
