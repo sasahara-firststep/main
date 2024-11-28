@@ -54,7 +54,9 @@ body {
   margin: 4px 0;
 }
 
+/* レスポンシブデザイン - モバイルでのスタイル */
 @media (max-width: 768px) {
+  /* メニューは初期状態で非表示 */
   .nav-links {
     display: none;
     position: absolute;
@@ -63,6 +65,7 @@ body {
     width: 100%;
     background-color: #333;
     text-align: center;
+    z-index: 100; /* メニューが他の要素の上に表示されるように */
   }
 
   .nav-links li {
@@ -71,6 +74,7 @@ body {
 
   .hamburger {
     display: flex;
+    z-index: 101; /* ハンバーガーメニューアイコンが最前面に */
   }
 
   .nav-links.active {
@@ -168,6 +172,7 @@ footer {
   padding: 20px;
   font-size: 1em;
 }
+
 
 
 
