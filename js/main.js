@@ -1,12 +1,9 @@
-// スクロールでフェードインする要素を検出
-window.addEventListener('scroll', () => {
-  const fadeElements = document.querySelectorAll('.fade-in-up');
-  fadeElements.forEach((element) => {
-    const rect = element.getBoundingClientRect();
-    if (rect.top < window.innerHeight) {
-      element.classList.add('visible');
-    }
-  });
-});
+// ハンバーガーメニューのトグル機能
+const hamburger = document.getElementById('hamburger');
+const navLinks = document.getElementById('nav-links');
 
+// ハンバーガーメニューのクリックでメニューを表示・非表示
+hamburger.addEventListener('click', () => {
+  navLinks.classList.toggle('active');
+});
 
