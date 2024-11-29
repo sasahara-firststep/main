@@ -4,7 +4,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = htmlspecialchars($_POST['email']);
     $message = htmlspecialchars($_POST['message']);
 
-    $to = "your-email@example.com"; // 送信先のメールアドレス
+    $to = "ry.1010.st@gmail.com"; // 送信先のメールアドレス
     $subject = "お問い合わせ: $name";
     $body = "名前: $name\nメール: $email\nメッセージ:\n$message";
 
