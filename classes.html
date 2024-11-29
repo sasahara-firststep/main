@@ -3,40 +3,51 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>クラス紹介 - ボクシングジム</title>
-  <link rel="stylesheet" href="css/child-page.css">
+  <title>クラス紹介 - FirstStep</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-
-  <!-- ヘッダー -->
-  <header class="hero">
-    <div class="hero-content">
-      <h1 class="fade-in-up">ボクシングクラス</h1>
-      <p class="fade-in-up delay-1">あなたに最適なクラスを選んで、ボクシングを始めましょう。</p>
-    </div>
+  <header>
+    <nav class="navbar">
+      <div class="logo">FirstStep</div>
+      <div class="hamburger" id="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">ホーム</a></li>
+        <li><a href="about.html">ジムについて</a></li>
+        <li><a href="classes.html" class="active">クラス紹介</a></li>
+        <li><a href="pricing.html">料金案内</a></li>
+        <li><a href="contact.html">お問い合わせ</a></li>
+      </ul>
+    </nav>
   </header>
 
-  <!-- クラス紹介セクション -->
-  <section class="classes">
-    <h2>提供するクラス</h2>
-    <div class="class-card fade-in-up">
-      <h3>初心者クラス</h3>
-      <p>ボクシング初心者向けの基本的な技術と体力づくりに特化したクラス。</p>
-    </div>
-    <div class="class-card fade-in-up">
-      <h3>アドバンスクラス</h3>
-      <p>中級者向け、技術を深め、実戦的な動きを練習するクラス。</p>
-    </div>
-    <div class="class-card fade-in-up">
-      <h3>フィットネスボクシング</h3>
-      <p>ボクシングを使ったフィットネスプログラム。楽しく汗をかこう！</p>
-    </div>
-  </section>
+  <main>
+    <section class="classes">
+      <h1>クラス紹介</h1>
+      <div class="class">
+        <h2>初心者クラス</h2>
+        <p>初めての方に最適な基礎トレーニングを提供します。</p>
+      </div>
+      <div class="class">
+        <h2>中級クラス</h2>
+        <p>テクニックとスタミナを向上させるためのトレーニング。</p>
+      </div>
+      <div class="class">
+        <h2>アドバンスクラス</h2>
+        <p>プロを目指す方のための高度なトレーニング。</p>
+      </div>
+    </section>
+  </main>
 
   <footer>
-    <p>© 2024 ボクシングジム</p>
+    <p>&copy; 2024 FirstStep All Rights Reserved.</p>
   </footer>
 
-  <script src="js/scripts.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>
+
