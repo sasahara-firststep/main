@@ -1,4 +1,4 @@
-/* 共通スタイル */
+/* 基本スタイル */
 body {
   margin: 0;
   font-family: 'Arial', sans-serif;
@@ -6,12 +6,7 @@ body {
   background: #f4f4f4;
 }
 
-header {
-  background: #333;
-  color: #fff;
-  padding: 1rem 0;
-}
-
+/* ナビゲーション */
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -45,6 +40,7 @@ header {
   color: #ff5a5f;
 }
 
+/* ハンバーガーメニュー */
 .hamburger {
   display: none;
   flex-direction: column;
@@ -58,7 +54,7 @@ header {
   background-color: #fff;
 }
 
-/* トップ画像のセクション */
+/* トップ画像セクション */
 .top-image {
   width: 100%;
   height: auto;
@@ -77,8 +73,9 @@ header {
   justify-content: center;
   text-align: center;
   background: url('../images/hero-background.jpg') no-repeat center center/cover;
-  height: 100vh;
+  height: 80vh;
   color: #fff;
+  padding: 0 1rem;
 }
 
 .hero-content {
@@ -151,11 +148,16 @@ footer {
   padding: 1rem;
   background: #333;
   color: #fff;
-  position: relative;
 }
 
 /* モバイル対応 */
 @media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+  }
+
   .nav-links {
     display: none;
     flex-direction: column;
@@ -175,16 +177,25 @@ footer {
     display: flex;
   }
 
-  .features {
-    flex-direction: column;
-  }
-
   .hero h1 {
     font-size: 2rem;
   }
 
   .hero p {
     font-size: 1rem;
+  }
+
+  .cta-btn {
+    font-size: 1rem;
+  }
+
+  .features {
+    flex-direction: column;
+  }
+
+  .feature {
+    text-align: center;
+    margin-bottom: 1rem;
   }
 }
 
@@ -199,6 +210,45 @@ main section.visible {
   opacity: 1;
   transform: translateY(0);
 }
+
+/* フォーム改善 */
+.contact form {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact input,
+.contact textarea,
+.contact button {
+  padding: 0.8rem;
+  margin-top: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.contact textarea {
+  height: 150px;
+}
+
+.contact button {
+  margin-top: 1rem;
+  padding: 0.8rem;
+  background: #ff5a5f;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.contact button:hover {
+  background: #e74c3c;
+}
+
 
 
 
