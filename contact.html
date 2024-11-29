@@ -28,18 +28,19 @@
   <main>
     <section class="contact">
       <h1>お問い合わせ</h1>
-      <form action="#" method="post">
-        <label for="name">お名前:</label>
-        <input type="text" id="name" name="name" required>
-        
-        <label for="email">メールアドレス:</label>
-        <input type="email" id="email" name="email" required>
-        
-        <label for="message">メッセージ:</label>
-        <textarea id="message" name="message" required></textarea>
-        
-        <button type="submit" class="cta-btn">送信</button>
-      </form>
+<form action="send_mail.php" method="POST">
+  <label for="name">名前:</label>
+  <input type="text" id="name" name="name" required>
+
+  <label for="email">メールアドレス:</label>
+  <input type="email" id="email" name="email" required>
+
+  <label for="message">メッセージ:</label>
+  <textarea id="message" name="message" required></textarea>
+
+  <button type="submit">送信</button>
+　　</form>
+
     </section>
   </main>
 
