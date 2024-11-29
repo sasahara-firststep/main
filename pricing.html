@@ -3,50 +3,51 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>料金案内 - ボクシングジム</title>
-  <link rel="stylesheet" href="css/child-page.css">
+  <title>料金案内 - FirstStep</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-
-  <!-- ヘッダー -->
-  <header class="hero">
-    <div class="hero-content">
-      <h1 class="fade-in-up">料金案内</h1>
-      <p class="fade-in-up delay-1">あなたにぴったりのプランでボクシングを始めよう。</p>
-    </div>
+  <header>
+    <nav class="navbar">
+      <div class="logo">FirstStep</div>
+      <div class="hamburger" id="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">ホーム</a></li>
+        <li><a href="about.html">ジムについて</a></li>
+        <li><a href="classes.html">クラス紹介</a></li>
+        <li><a href="pricing.html" class="active">料金案内</a></li>
+        <li><a href="contact.html">お問い合わせ</a></li>
+      </ul>
+    </nav>
   </header>
 
-  <!-- 料金プランセクション -->
-  <section class="pricing">
-    <h2>料金プラン</h2>
-    <table>
-      <tr>
-        <th>プラン名</th>
-        <th>料金</th>
-        <th>内容</th>
-      </tr>
-      <tr>
-        <td>月額プラン</td>
-        <td>¥10,000</td>
-        <td>月に何度でも通い放題</td>
-      </tr>
-      <tr>
-        <td>チケット制</td>
-        <td>¥5,000（5回チケット）</td>
-        <td>必要な時にジムに通えるチケット制</td>
-      </tr>
-      <tr>
-        <td>パーソナルトレーニング</td>
-        <td>¥7,000/1回</td>
-        <td>個別指導で効率よくトレーニング</td>
-      </tr>
-    </table>
-  </section>
+  <main>
+    <section class="pricing">
+      <h1>料金案内</h1>
+      <div class="price-plan">
+        <h2>月額プラン</h2>
+        <p>¥10,000/月</p>
+      </div>
+      <div class="price-plan">
+        <h2>1日利用</h2>
+        <p>¥2,000/回</p>
+      </div>
+      <div class="price-plan">
+        <h2>年間プラン</h2>
+        <p>¥100,000/年</p>
+      </div>
+    </section>
+  </main>
 
   <footer>
-    <p>© 2024 ボクシングジム</p>
+    <p>&copy; 2024 FirstStep All Rights Reserved.</p>
   </footer>
 
-  <script src="js/scripts.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>
+
