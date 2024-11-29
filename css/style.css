@@ -1,119 +1,194 @@
-/* 共通の基本スタイルは前述のコードを使用 */
+/* 共通スタイル */
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  background: #f4f4f4;
+}
 
+header {
+  background: #333;
+  color: #fff;
+  padding: 1rem 0;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: #333;
+  color: #fff;
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+  top: 0;
+  left: 0;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #ff5a5f;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 4px;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+}
+
+/* トップ画像のセクション */
+.top-image {
+  width: 100%;
+  height: auto;
+}
+
+.top-image .responsive-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ヒーローセクション */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: url('../images/hero-background.jpg') no-repeat center center/cover;
+  height: 100vh;
+  color: #fff;
+}
+
+.hero-content {
+  max-width: 600px;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.cta-btn {
+  background: #ff5a5f;
+  color: #fff;
+  padding: 0.8rem 1.5rem;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+.cta-btn:hover {
+  background: #e74c3c;
+}
+
+/* メインセクション */
 main {
   max-width: 1200px;
-  margin: 80px auto; /* ヘッダー固定分を考慮 */
+  margin: 80px auto;
   padding: 1rem;
   background: #fff;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
 }
 
-/* About セクション */
-.about h1 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-  color: #333;
-}
-
-.about p {
-  margin-bottom: 1rem;
-  line-height: 1.8;
-  color: #555;
-}
-
-/* Classes セクション */
-.classes .class {
-  margin-bottom: 2rem;
-}
-
-.classes h1 {
-  font-size: 2rem;
-  color: #333;
-  text-align: center;
-}
-
-.classes .class h2 {
-  font-size: 1.5rem;
-  color: #444;
-  margin-bottom: 0.5rem;
-}
-
-.classes p {
-  line-height: 1.6;
-  color: #555;
-}
-
-/* Pricing セクション */
-.pricing .price-plan {
-  margin-bottom: 2rem;
-  text-align: center;
-}
-
-.pricing h1 {
-  text-align: center;
-  font-size: 2rem;
-  margin-bottom: 1rem;
-}
-
-.price-plan h2 {
-  font-size: 1.5rem;
-  color: #444;
-}
-
-.price-plan p {
-  font-size: 1.2rem;
-  color: #555;
-}
-
-/* Contact セクション */
-.contact h1 {
-  text-align: center;
-  font-size: 2rem;
-  margin-bottom: 1rem;
-}
-
-.contact form {
-  max-width: 600px;
-  margin: 0 auto;
+.features {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+  gap: 1rem;
 }
 
-.contact label {
+.feature {
+  flex: 1;
+  text-align: center;
+  padding: 1rem;
+}
+
+.feature-img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.features h2 {
   margin-top: 1rem;
-  font-weight: bold;
+  color: #333;
 }
 
-.contact input,
-.contact textarea {
-  padding: 0.8rem;
-  margin-top: 0.5rem;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  font-size: 1rem;
+.features p {
+  color: #555;
 }
 
-.contact textarea {
-  height: 150px;
-}
-
-.contact button {
-  margin-top: 1rem;
-  padding: 0.8rem;
-  background: #ff5a5f;
+/* フッター */
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: #333;
   color: #fff;
-  border: none;
-  border-radius: 5px;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: background 0.3s;
+  position: relative;
 }
 
-.contact button:hover {
-  background: #e74c3c;
+/* モバイル対応 */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: #333;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 100%;
+    padding: 1rem 0;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .features {
+    flex-direction: column;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
 }
 
+/* セクションアニメーション */
 main section {
   opacity: 0;
   transform: translateY(20px);
@@ -124,6 +199,7 @@ main section.visible {
   opacity: 1;
   transform: translateY(0);
 }
+
 
 
 
