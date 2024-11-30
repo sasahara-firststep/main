@@ -1,56 +1,52 @@
-document.addEventListener("DOMContentLoaded", () => {
-  // ハンバーガーメニューの操作
-  const hamburger = document.querySelector(".hamburger");
-  const navLinks = document.querySelector(".nav-links");
+document.addEventListener('DOMContentLoaded', () => {
+  // 1. アクセスカウンター
+  const counter = document.getElementById('visitCounter');
+  let count = parseInt(localStorage.getItem('visitCount') || '0') + 1;
+  localStorage.setItem('visitCount', count);
+  if (counter) {
+    counter.textContent = `訪問者数: ${count}`;
+  }
 
-  hamburger.addEventListener("click", () => {
-    navLinks.classList.toggle("open");
-    hamburger.classList.toggle("toggle");
+  // 2. ハンバーガーメニューの表示
+  const hamburger = document.getElementById('hamburger');
+  const navLinks = document.getElementById('nav-links');
+
+  hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+    hamburger.classList.toggle('active');
   });
 
-  // スムーズスクロール
-  const links = document.querySelectorAll(".nav-links a");
+  // 3. スクロールエフェクト (要素が画面に入った時にフェードイン)
+  const elements = document.querySelectorAll('.fade-in');
 
-  links.forEach(link => {
-    link.addEventListener("click", function (e) {
+  function checkInView() {
+    const triggerBottom = window.innerHeight / 5 * 4;
+    elements.forEach((el) => {
+      const boxTop = el.getBoundingClientRect().top;
+      if (boxTop < triggerBottom) {
+        el.classList.add('show');
+      } else {
+        el.classList.remove('show');
+      }
+    });
+  }
+
+  window.addEventListener('scroll', checkInView);
+  checkInView(); // 初回チェック
+
+  // 4. スムーズスクロール
+  const smoothScrollLinks = document.querySelectorAll('a[href^="#"]');
+  smoothScrollLinks.forEach((link) => {
+    link.addEventListener('click', (e) => {
       e.preventDefault();
-      const target = document.querySelector(this.getAttribute("href"));
-      target.scrollIntoView({
-        behavior: "smooth",
-        block: "start",
+      const target = document.querySelector(link.getAttribute('href'));
+      window.scrollTo({
+        top: target.offsetTop,
+        behavior: 'smooth'
       });
     });
   });
-
-  // お問い合わせフォームの送信
-  const form = document.querySelector("#contact-form");
-
-  form.addEventListener("submit", async (e) => {
-    e.preventDefault();
-    const formData = new FormData(form);
-
-    // バリデーション
-    const name = formData.get("name");
-    const email = formData.get("email");
-    const message = formData.get("message");
-
-    if (!name || !email || !message) {
-      alert("全てのフィールドを入力してください！");
-      return;
-    }
-
-    // メール送信のモックアップ（実際のAPIをここで使用）
-    try {
-      await fetch("https://your-email-api-endpoint.com/send", {
-        method: "POST",
-        body: formData,
-      });
-      alert("メッセージが送信されました！");
-      form.reset();
-    } catch (error) {
-      alert("送信に失敗しました。後でもう一度お試しください。");
-    }
-  });
 });
+
 
 
