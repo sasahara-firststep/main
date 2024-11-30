@@ -5,13 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>FirstStep</title>
   <link rel="stylesheet" href="css/style.css">
-  <script src="js/main.js" defer></script>
 </head>
 <body>
+  <!-- ヘッダー -->
   <header>
     <nav class="navbar">
       <div class="logo">FirstStep</div>
-      <ul class="nav-links">
+      <div class="hamburger" id="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">ホーム</a></li>
         <li><a href="about.html">ジムについて</a></li>
         <li><a href="classes.html">クラス紹介</a></li>
         <li><a href="pricing.html">料金案内</a></li>
@@ -20,31 +26,25 @@
     </nav>
   </header>
 
-  <section class="hero" id="home">
+  <!-- ヒーローセクション -->
+  <section class="hero">
     <div class="hero-content">
-      <h1>新しい挑戦がここから始まる</h1>
-      <p>本格的なボクシングトレーニングを始めてみませんか？</p>
+      <h1>強くなりたいあなたへ</h1>
+      <p>ボクシングジムで本格的なトレーニングを始めましょう！</p>
       <a href="about.html" class="cta-btn">ジムについて</a>
     </div>
   </section>
 
-  <section class="features">
-    <h2>ジムの特徴</h2>
-    <div class="feature">
-      <img src="images/feature1.jpg" alt="トレーニング" class="feature-img">
-      <h3>トレーニング</h3>
-      <p>初心者からプロを目指す人まで、個別対応のトレーニングを提供します。</p>
-    </div>
-    <div class="feature">
-      <img src="images/feature2.jpg" alt="クラス紹介" class="feature-img">
-      <h3>クラス紹介</h3>
-      <p>多彩なクラスであなたの目標をサポート。</p>
-    </div>
+  <!-- アクセスカウンター -->
+  <section class="visit-counter">
+    <p id="visit-counter"></p>
   </section>
 
   <footer>
     <p>&copy; 2024 FirstStep All Rights Reserved.</p>
   </footer>
+
+  <script src="js/main.js"></script>
 </body>
 </html>
 
