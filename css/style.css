@@ -45,7 +45,6 @@ header {
   font-size: 1.2rem;
 }
 
-/* ハンバーガーメニュー */
 .hamburger {
   cursor: pointer;
   display: none;
@@ -135,46 +134,12 @@ header {
   background-color: #ff4500;
 }
 
-/* フィーチャーセクション */
-.features {
-  display: flex;
-  justify-content: space-around;
-  padding: 50px 0;
-  background-color: #fff;
-}
-
-.feature {
+/* アクセスカウンター */
+.visit-counter {
   text-align: center;
-  width: 30%;
-}
-
-.feature img {
-  width: 100%;
-  height: auto;
-  border-radius: 5px;
-}
-
-.feature h2 {
-  margin-top: 20px;
-  font-size: 1.5rem;
+  margin: 20px 0;
+  font-size: 1.2rem;
   color: #333;
-}
-
-.feature p {
-  font-size: 1rem;
-  color: #666;
-}
-
-/* フッター */
-footer {
-  background-color: #333;
-  color: white;
-  text-align: center;
-  padding: 20px 0;
-}
-
-footer p {
-  font-size: 1rem;
 }
 
 /* アニメーション */
@@ -187,15 +152,6 @@ footer p {
   }
 }
 
-/* スクロールエフェクト */
-.fade-in {
-  opacity: 0;
-  transition: opacity 0.5s ease-out;
-}
-
-.fade-in.show {
-  opacity: 1;
-}
 
 
 
