@@ -3,126 +3,51 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>FirstStep Boxing Gym</title>
+  <title>FirstStep</title>
   <link rel="stylesheet" href="css/style.css">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  <script src="js/main.js" defer></script>
 </head>
 <body>
-  <!-- ヘッダー -->
   <header>
     <nav class="navbar">
       <div class="logo">FirstStep</div>
       <ul class="nav-links">
-        <li><a href="#home">ホーム</a></li>
-        <li><a href="#about">ジムについて</a></li>
-        <li><a href="#classes">クラス紹介</a></li>
-        <li><a href="#pricing">料金プラン</a></li>
-        <li><a href="#trainers">トレーナー</a></li>
-        <li><a href="#contact">お問い合わせ</a></li>
+        <li><a href="about.html">ジムについて</a></li>
+        <li><a href="classes.html">クラス紹介</a></li>
+        <li><a href="pricing.html">料金案内</a></li>
+        <li><a href="contact.html">お問い合わせ</a></li>
       </ul>
-      <div class="hamburger">
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
-      </div>
     </nav>
   </header>
 
-  <!-- ホームセクション -->
-  <section id="home" class="hero">
+  <section class="hero" id="home">
     <div class="hero-content">
-      <h1>限界を超える</h1>
-      <p>初心者もプロも、ここで新たな挑戦を。</p>
-      <a href="#about" class="cta-btn">詳細を見る</a>
+      <h1>新しい挑戦がここから始まる</h1>
+      <p>本格的なボクシングトレーニングを始めてみませんか？</p>
+      <a href="about.html" class="cta-btn">ジムについて</a>
     </div>
   </section>
 
-  <!-- ジムについて -->
-  <section id="about" class="section">
-    <h2>ジムについて</h2>
-    <p>FirstStepは、地域の皆様に本格的なボクシングトレーニングを提供する施設です。初心者も安心して始められます。</p>
-    <img src="images/about.jpg" alt="ジムの内観">
-  </section>
-
-  <!-- クラス紹介 -->
-  <section id="classes" class="section">
-    <h2>クラス紹介</h2>
-    <div class="class-grid">
-      <div class="class-item">
-        <h3>初級クラス</h3>
-        <p>基礎から始めて、徐々にスキルアップ。</p>
-      </div>
-      <div class="class-item">
-        <h3>中級クラス</h3>
-        <p>体力とスキルをさらに磨く。</p>
-      </div>
-      <div class="class-item">
-        <h3>プロ志望クラス</h3>
-        <p>プロを目指す特化型プログラム。</p>
-      </div>
+  <section class="features">
+    <h2>ジムの特徴</h2>
+    <div class="feature">
+      <img src="images/feature1.jpg" alt="トレーニング" class="feature-img">
+      <h3>トレーニング</h3>
+      <p>初心者からプロを目指す人まで、個別対応のトレーニングを提供します。</p>
+    </div>
+    <div class="feature">
+      <img src="images/feature2.jpg" alt="クラス紹介" class="feature-img">
+      <h3>クラス紹介</h3>
+      <p>多彩なクラスであなたの目標をサポート。</p>
     </div>
   </section>
 
-  <!-- 料金プラン -->
-  <section id="pricing" class="section">
-    <h2>料金プラン</h2>
-    <table class="pricing-table">
-      <tr>
-        <th>プラン</th>
-        <th>料金</th>
-      </tr>
-      <tr>
-        <td>月額会員</td>
-        <td>¥12,000</td>
-      </tr>
-      <tr>
-        <td>都度利用</td>
-        <td>¥3,000</td>
-      </tr>
-    </table>
-  </section>
-
-  <!-- トレーナー紹介 -->
-  <section id="trainers" class="section">
-    <h2>トレーナー</h2>
-    <div class="trainer-grid">
-      <div class="trainer-item">
-        <img src="images/trainer1.jpg" alt="Trainer 1">
-        <h3>山田 太郎</h3>
-        <p>元日本チャンピオン</p>
-      </div>
-      <div class="trainer-item">
-        <img src="images/trainer2.jpg" alt="Trainer 2">
-        <h3>田中 一郎</h3>
-        <p>フィットネストレーナー</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- お問い合わせ -->
-  <section id="contact" class="section">
-    <h2>お問い合わせ</h2>
-    <form id="contact-form">
-      <label for="name">名前:</label>
-      <input type="text" id="name" name="name" required>
-      
-      <label for="email">メールアドレス:</label>
-      <input type="email" id="email" name="email" required>
-      
-      <label for="message">メッセージ:</label>
-      <textarea id="message" name="message" required></textarea>
-      
-      <button type="submit">送信</button>
-    </form>
-  </section>
-
-  <!-- フッター -->
   <footer>
     <p>&copy; 2024 FirstStep All Rights Reserved.</p>
   </footer>
-  <script src="js/main.js"></script>
 </body>
 </html>
+
 
 
 
