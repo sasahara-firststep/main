@@ -1,5 +1,8 @@
-// メニューの開閉
-document.querySelector('.menu-toggle').addEventListener('click', function() {
-    document.querySelector('.nav-menu').classList.toggle('open');
-  });
+document.addEventListener('DOMContentLoaded', () => {
+  const menuToggle = document.querySelector('.menu-toggle');
+  const navMenu = document.querySelector('.nav-menu');
 
+  menuToggle.addEventListener('click', () => {
+    navMenu.classList.toggle('open');
+  });
+});
