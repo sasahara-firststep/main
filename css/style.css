@@ -7,23 +7,25 @@ body {
 header {
   background: #333;
   color: white;
-  padding: 10px 20px;
+  padding: 20px 0;
   position: fixed;
   width: 100%;
   top: 0;
   z-index: 1000;
+  text-align: center;
 }
 
 .logo {
   font-family: 'Arial Black', sans-serif;
-  font-size: 36px;
+  font-size: 48px;
   color: white;
   letter-spacing: 2px;
   text-transform: uppercase;
+  margin: 0;
 }
 
 .logo span {
-  color: #f39c12; /* 黄色のアクセントカラー */
+  color: #f39c12;
   font-weight: bold;
 }
 
@@ -34,23 +36,62 @@ header {
   color: white;
   font-size: 24px;
   cursor: pointer;
+  position: absolute;
+  top: 20px;
+  right: 20px;
 }
 
 .nav-menu {
   display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .nav-links li {
-  list-style: none;
   margin: 0 15px;
 }
 
 .nav-links a {
   color: white;
   text-decoration: none;
+  font-size: 18px;
 }
 
-.hero, .fade-in {
+/* スマホ用メニュー */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-menu {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    background: #333;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 100%;
+  }
+
+  .nav-menu.open {
+    display: flex;
+  }
+
+  .nav-links li {
+    margin: 10px 0;
+  }
+}
+
+/* Hero Section */
+.hero {
   height: 100vh;
   background: url('../hero-bg.jpg') no-repeat center center/cover;
   display: flex;
@@ -65,30 +106,28 @@ header {
   padding: 20px;
 }
 
-@media (max-width: 768px) {
-  .menu-toggle {
-    display: block;
-  }
-
-  .nav-menu {
-    display: none;
-    flex-direction: column;
-    background: #333;
-    position: absolute;
-    top: 50px;
-    right: 0;
-    width: 200px;
-  }
-
-  .nav-menu.open {
-    display: flex;
-  }
+/* その他セクション */
+#about, #testimonials, #access, #cta {
+  padding: 100px 20px;
+  text-align: center;
 }
 
+#about {
+  background: url('../about-bg.jpg') no-repeat center center/cover;
+  color: white;
+}
 
+#testimonials {
+  background: url('../testimonials-bg.jpg') no-repeat center center/cover;
+  color: white;
+}
 
+#access {
+  background: url('../access-bg.jpg') no-repeat center center/cover;
+  color: white;
+}
 
-
-
-
-
+#cta {
+  background: url('../cta-bg.jpg') no-repeat center center/cover;
+  color: white;
+}
