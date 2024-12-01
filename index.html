@@ -9,90 +9,62 @@
 <body>
   <header>
     <div class="container">
-      <h1 class="logo">FIRST<span>STEP</span></h1>
-      <button class="menu-toggle" aria-label="メニュー">
-        ☰
-      </button>
-      <nav class="nav-menu">
+      <h1 class="logo">FIRST STEP</h1>
+      <nav>
         <ul class="nav-links">
           <li><a href="#home">ホーム</a></li>
-          <li><a href="#about">サービス紹介</a></li>
-          <li><a href="#testimonials">お客様の声</a></li>
+          <li><a href="#services">サービス</a></li>
           <li><a href="#trainer">トレーナー紹介</a></li>
-          <li><a href="#access">アクセス</a></li>
-          <li><a href="#cta">お問い合わせ</a></li>
+          <li><a href="#contact">お問い合わせ</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <!-- Hero Section -->
   <section class="hero" id="home">
-    <div class="overlay">
-      <h2>あなたの「第一歩」をサポートします</h2>
-      <p>初心者からプロまで、目標に合わせたトレーニングを提供</p>
-      <a href="#trial" class="btn">無料体験はこちら</a>
+    <div class="hero-content">
+      <h2>あなたの第一歩をサポートします</h2>
+      <p>目標に合わせたトレーニングを提供</p>
+      <a href="#services" class="cta-btn">サービスを確認</a>
     </div>
   </section>
 
-  <!-- About Section -->
-  <section id="about">
-    <div class="overlay">
-      <h2>サービス紹介</h2>
-      <p>お客様一人ひとりに合わせたトレーニングを提供します。</p>
+  <!-- サービスセクション -->
+  <section id="services" class="section fade-in">
+    <h2>提供サービス</h2>
+    <div class="service-cards">
+      <div class="card">
+        <h3>初心者コース</h3>
+        <p>ボクシングを始めたばかりの方に最適</p>
+      </div>
+      <div class="card">
+        <h3>上級者コース</h3>
+        <p>プロを目指す方向けのコースです</p>
+      </div>
+      <div class="card">
+        <h3>パーソナルトレーニング</h3>
+        <p>個別指導で効率よく成長できます</p>
+      </div>
     </div>
   </section>
 
-  <!-- Testimonials Section -->
-  <section id="testimonials">
-    <div class="overlay">
-      <h2>お客様の声</h2>
-      <p>"初心者でも安心して通えるジムです。"</p>
+  <!-- トレーナー紹介 -->
+  <section id="trainer" class="section fade-in">
+    <h2>トレーナー紹介</h2>
+    <div class="trainer-info">
+      <img src="../trainer.jpg" alt="トレーナーの写真" class="trainer-image">
+      <p>トレーナー：佐藤 太郎</p>
+      <p>ボクシング経験10年。初心者から上級者まで対応しています。</p>
     </div>
   </section>
 
-  <!-- Trainer Section -->
-  <section id="trainer">
-    <div class="container">
-      <img src="trainers-bg.jpg" alt="トレーナー佐藤健" class="trainer-img">
-      <h3>笹原</h3>
-      <p>元プロボクサー。初心者からプロまで指導可能。</p>
-    </div>
-  </section>
-
-  <!-- Access Section -->
-  <section id="access">
-    <div class="overlay">
-      <h2>アクセス</h2>
-      <p>〒916-0007 福井県鯖江市三六町１丁目14-10</p>
-    </div>
-    <div class="container">
-      <iframe 
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3238.620012345676!2d136.203455!3d35.940256!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5ff7f7a4f0f58b6f%3A0x1234567890abcdef!2z44CSOTAwLTAwMTMg5aSn5a6u5biC5bel5qOf5biC5p2x5pys5LiJ5q61!5e0!3m2!1sja!2sjp!4v1234567890123" 
-      width="600" 
-      height="450" 
-      style="border:0;" 
-      allowfullscreen="" 
-      loading="lazy">
-    </iframe>
-    
-    </div>
-  </section>
-
-  <!-- CTA Section -->
-  <section id="cta">
-    <div class="overlay">
-      <h2>今すぐ、第一歩を踏み出そう</h2>
-      <a href="#contact" class="btn">無料体験を申し込む</a>
-    </div>
+  <!-- お問い合わせ -->
+  <section id="contact" class="section fade-in">
+    <h2>お問い合わせ</h2>
+    <p>あなたの目標をサポートします。お気軽にご連絡ください。</p>
+    <a href="mailto:info@firststep.com" class="cta-btn">メールで問い合わせ</a>
   </section>
 
   <script src="js/main.js"></script>
 </body>
 </html>
-
-
-
-
-
-
