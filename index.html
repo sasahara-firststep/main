@@ -7,64 +7,76 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <header>
+  <!-- ヘッダー -->
+  <header class="header">
     <div class="container">
       <h1 class="logo">FIRST STEP</h1>
       <nav>
         <ul class="nav-links">
           <li><a href="#home">ホーム</a></li>
           <li><a href="#services">サービス</a></li>
-          <li><a href="#trainer">トレーナー紹介</a></li>
-          <li><a href="#contact">お問い合わせ</a></li>
+          <li><a href="#trainer">トレーナー</a></li>
+          <li><a href="#access">アクセス</a></li>
+          <li><a href="price.html">料金</a></li> <!-- 料金ページへのリンク -->
+          <li><a href="contact.html">お問い合わせ</a></li> <!-- お問い合わせページへのリンク -->
         </ul>
       </nav>
     </div>
   </header>
-
-  <section class="hero" id="home">
-    <div class="hero-content">
-      <h2>あなたの第一歩をサポートします</h2>
-      <p>目標に合わせたトレーニングを提供</p>
-      <a href="#services" class="cta-btn">サービスを確認</a>
+  
+  <!-- ヒーローセクション -->
+  <section class="hero">
+    <div class="overlay">
+      <h2>あなたの「第一歩」をサポートします</h2>
+      <p>初心者からプロまで、目標に合わせたトレーニングを提供</p>
+      <a href="#trial" class="btn">無料体験はこちら</a>
     </div>
   </section>
 
-  <!-- サービスセクション -->
-  <section id="services" class="section fade-in">
-    <h2>提供サービス</h2>
-    <div class="service-cards">
-      <div class="card">
-        <h3>初心者コース</h3>
-        <p>ボクシングを始めたばかりの方に最適</p>
-      </div>
-      <div class="card">
-        <h3>上級者コース</h3>
-        <p>プロを目指す方向けのコースです</p>
-      </div>
-      <div class="card">
+  <!-- サービス紹介 -->
+  <section class="services" id="services">
+    <h2>サービス紹介</h2>
+    <div class="service-items">
+      <div class="service-item">
+        <img src="service1.jpg" alt="トレーニング" />
         <h3>パーソナルトレーニング</h3>
-        <p>個別指導で効率よく成長できます</p>
+        <p>あなたに最適なトレーニングプランを提供</p>
+      </div>
+      <div class="service-item">
+        <img src="service2.jpg" alt="ダイエット" />
+        <h3>ダイエットサポート</h3>
+        <p>効果的なダイエットプランで理想の体型に</p>
+      </div>
+      <div class="service-item">
+        <img src="service3.jpg" alt="筋力強化" />
+        <h3>筋力強化</h3>
+        <p>筋力向上をサポートするプログラム</p>
       </div>
     </div>
   </section>
 
   <!-- トレーナー紹介 -->
-  <section id="trainer" class="section fade-in">
+  <section class="trainer">
     <h2>トレーナー紹介</h2>
-    <div class="trainer-info">
-      <img src="../trainer.jpg" alt="トレーナーの写真" class="trainer-image">
-      <p>トレーナー：佐藤 太郎</p>
-      <p>ボクシング経験10年。初心者から上級者まで対応しています。</p>
+    <div class="trainer-item">
+      <img src="trainer.jpg" alt="トレーナー1" class="trainer-image">
+      <h3>笹原伊史</h3>
+      <p>全日本選手権2年連続優勝 国民体育大会2年連続優勝 北京オリンピック強化指定選手全日本選手権最優秀選手賞</p>
+    </div>
+    <!-- 他のトレーナー紹介が続きます -->
+  </section>
+
+  <!-- アクセス -->
+  <section class="access" id="access">
+    <h2>アクセス</h2>
+    <div class="map">
+      <!-- Google Map APIを使って地図を表示 -->
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3240.909237659369!2d137.24299381525692!3d35.15309782423658!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6002e6b1cf7b1f71%3A0x26edcf01f8b9e5b1!2z44CSNjYwMDAwMDAwMjA0XzEwP2c2MDY1NTg3Mjg5MDgzMzg!5e0!3m2!1sja!2sjp!4v1675389671304!5m2!1sja!2sjp" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
     </div>
   </section>
 
-  <!-- お問い合わせ -->
-  <section id="contact" class="section fade-in">
-    <h2>お問い合わせ</h2>
-    <p>あなたの目標をサポートします。お気軽にご連絡ください。</p>
-    <a href="mailto:info@firststep.com" class="cta-btn">メールで問い合わせ</a>
-  </section>
-
-  <script src="js/main.js"></script>
+  <footer>
+    <p>&copy; 2024 FIRST STEP. All rights reserved.</p>
+  </footer>
 </body>
 </html>
