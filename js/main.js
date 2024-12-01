@@ -1,8 +1,13 @@
-document.addEventListener('DOMContentLoaded', () => {
-  const menuToggle = document.querySelector('.menu-toggle');
-  const navMenu = document.querySelector('.nav-menu');
+// スクロールイベントで要素を表示する
+window.addEventListener('scroll', () => {
+  const elements = document.querySelectorAll('.fade-in');
+  const windowHeight = window.innerHeight;
 
-  menuToggle.addEventListener('click', () => {
-    navMenu.classList.toggle('open');
+  elements.forEach(element => {
+    const elementTop = element.getBoundingClientRect().top;
+
+    if (elementTop < windowHeight - 100) {
+      element.classList.add('visible');
+    }
   });
 });
