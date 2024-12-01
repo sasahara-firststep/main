@@ -88,7 +88,6 @@ header + section {
 }
 
 /* サービス紹介セクション */
-/* サービス紹介セクション */
 .services {
   padding: 60px 0;
   text-align: center;
@@ -233,6 +232,7 @@ footer p {
   font-size: 16px;
 }
 
+/* トレーナー画像 */
 .trainer .trainer-image {
   width: 200px; /* 画像のサイズを調整 */
   height: 200px; /* 画像のサイズを調整 */
@@ -252,4 +252,40 @@ footer p {
   text-align: center; /* 説明文も中央揃え */
   font-size: 18px;
   margin-top: 10px;
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-links li {
+    margin: 10px 0;
+  }
+
+  .services .service-items {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .service-item {
+    width: 80%;
+    margin-bottom: 30px;
+  }
+
+  .price-list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .price-item {
+    width: 80%;
+    margin-bottom: 30px;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
 }
