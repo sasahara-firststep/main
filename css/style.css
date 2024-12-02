@@ -8,9 +8,9 @@
   color: white;
   z-index: 1000;
   display: flex;
-  justify-content: space-between;
   align-items: center;
   padding: 20px 40px;
+  justify-content: space-between;  /* ロゴとナビゲーションを左右に分ける */
 }
 
 /* ロゴ */
@@ -18,9 +18,9 @@
   font-size: 30px;
   margin: 0;
   text-align: center;
-  display: flex;
-  justify-content: center;
-  flex: 1;  /* ロゴを中央に配置 */
+  position: absolute;  /* ロゴを絶対位置で中央に */
+  left: 50%;
+  transform: translateX(-50%);  /* 完全な中央揃え */
 }
 
 /* ナビゲーションメニュー */
@@ -82,9 +82,9 @@ header + section {
   }
 
   .logo {
-    flex: 0; /* ロゴのflexを無効にして中央に調整 */
-    justify-content: center;
-    text-align: center;
+    position: static;  /* ロゴの絶対位置を解除 */
+    transform: none;  /* 位置調整を解除 */
+    text-align: left;  /* 左寄せに戻す */
   }
 
   .nav-links {
@@ -110,8 +110,7 @@ header + section {
   .nav-links li {
     margin: 10px 0;
   }
-}
-
+  
   .nav-links a {
     font-size: 20px;
   }
