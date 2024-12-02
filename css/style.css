@@ -6,23 +6,26 @@
   width: 100%;
   background-color: #333;
   color: white;
-  padding: 10px 0;
   z-index: 1000;
   display: flex;
-  justify-content: space-between;
+  justify-content: center; /* ヘッダー内の要素を中央に配置 */
   align-items: center;
-  padding: 10px 20px;
+  padding: 20px 40px;
 }
 
+/* ロゴ */
 .header .logo {
   font-size: 30px;
   margin: 0;
+  text-align: center;
+  flex: 1; /* ロゴを中央に配置するためにflexを使用 */
 }
 
+/* ナビゲーションメニュー */
 .nav-links {
   list-style: none;
   display: flex;
-  justify-content: center;
+  justify-content: flex-end; /* ナビゲーションメニューを右寄せ */
   margin: 0;
   padding: 0;
 }
@@ -39,6 +42,24 @@
 
 .nav-links a:hover {
   color: #ff6347;
+}
+
+/* ヘッダー下のコンテンツとの間隔 */
+header + section {
+  padding-top: 20px; /* ヘッダーの高さに合わせて余白を空ける */
+}
+
+
+
+
+
+.logo a {
+  color: white; /* ロゴの色 */
+  text-decoration: none; /* 下線を消す */
+}
+
+.logo a:hover {
+  color: white; /* ホバー時に色が変わらないようにする */
 }
 
 /* ハンバーガーメニュー */
@@ -86,19 +107,9 @@ body {
   padding-top: 80px; /* ヘッダー分のスペース */
 }
 
-header + section {
-  padding-top: 80px; /* ヘッダーの高さ分 */
-}
-
-
 /* bodyにpadding-topを追加してヘッダー分の隙間を作成 */
 body {
   padding-top: 80px; /* ヘッダー分のスペース */
-}
-
-/* 各ページの最初のセクションにpadding-topを追加してヘッダーが被らないように */
-header + section {
-  padding-top: 80px; /* ヘッダーの高さ分 */
 }
 
 /* トップページのヒーローセクション */
@@ -341,4 +352,46 @@ footer p {
 
 html {
   scroll-behavior: smooth;
+}
+
+.programs {
+  padding: 2rem 1rem;
+  background-color: #f9f9f9;
+}
+
+.programs h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+  color: #333;
+}
+
+.program-items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.program-item {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  width: 100%;
+}
+
+.program-item h3 {
+  margin-top: 0;
+  color: #0073e6;
+}
+
+.program-item ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.program-item ul li {
+  margin: 0.5rem 0;
 }
