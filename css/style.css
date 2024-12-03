@@ -520,3 +520,47 @@ html {
     margin-bottom: 20px;
   }
 }
+
+.services {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.services.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.programs {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.programs.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.trainer {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.trainer.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.hours {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.hours.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
