@@ -77,18 +77,18 @@ header + section {
 /* スマホ表示時の調整 */
 @media (max-width: 768px) {
   .header {
-    justify-content: space-between;
-    padding: 15px 20px;
+    justify-content: space-between;  /* 左右に分ける */
+    padding: 15px 20px;  /* モバイル用に余白を調整 */
   }
 
   .logo {
-    position: static;
-    transform: none;
-    text-align: left;
+    position: static;  /* ロゴの絶対位置を解除 */
+    transform: none;  /* 位置調整を解除 */
+    text-align: left;  /* 左寄せに戻す */
   }
 
   .nav-links {
-    display: none;
+    display: none; /* メニューは非表示 */
     width: 100%;
     text-align: center;
     background-color: #333;
