@@ -15,16 +15,9 @@ document.addEventListener('click', (e) => {
   }
 });
 
-// メニューリンクをクリックしたときにメニューを閉じる
-navLinkItems.forEach(link => {
-  link.addEventListener('click', () => {
-    navLinks.classList.remove('active');
-  });
-});
-
 document.addEventListener("DOMContentLoaded", () => {
   const sectionsToAnimate = document.querySelectorAll(".services, .programs, .trainer, .hours");
-  
+
   const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
@@ -32,9 +25,10 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   }, {
-    threshold: 0.7 // 少しでも見えたらトリガー
+    threshold: 0.4 // 40%が表示されたらトリガー
   });
 
   sectionsToAnimate.forEach(section => observer.observe(section));
 });
+
 
