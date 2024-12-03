@@ -13,3 +13,20 @@ document.addEventListener('click', (e) => {
     navLinks.classList.remove('active');
   }
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const sectionsToAnimate = document.querySelectorAll(".services, .programs, .trainer, .hours");
+  
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+      }
+    });
+  }, {
+    threshold: 0.7 // 少しでも見えたらトリガー
+  });
+
+  sectionsToAnimate.forEach(section => observer.observe(section));
+});
+
