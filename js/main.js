@@ -1,6 +1,7 @@
 // ハンバーガーメニューの表示切り替え
 const menuToggle = document.getElementById('menu-toggle');
 const navLinks = document.getElementById('nav-links');
+const navLinkItems = navLinks.querySelectorAll('a'); // 各メニューリンクを取得
 
 // ハンバーガーメニューの開閉
 menuToggle.addEventListener('click', () => {
@@ -12,6 +13,13 @@ document.addEventListener('click', (e) => {
   if (!menuToggle.contains(e.target) && !navLinks.contains(e.target)) {
     navLinks.classList.remove('active');
   }
+});
+
+// メニューリンクをクリックしたときにメニューを閉じる
+navLinkItems.forEach(link => {
+  link.addEventListener('click', () => {
+    navLinks.classList.remove('active');
+  });
 });
 
 document.addEventListener("DOMContentLoaded", () => {
