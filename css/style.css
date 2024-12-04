@@ -51,10 +51,6 @@ header + section {
   padding-top: 20px; /* ヘッダーの高さに合わせて余白を空ける */
 }
 
-
-
-
-
 .logo a {
   color: white; /* ロゴの色 */
   text-decoration: none; /* 下線を消す */
@@ -128,7 +124,7 @@ body {
 
 /* トップページのヒーローセクション */
 .hero {
-  background-image: url('../hero-bg.jpg');
+  background-image: url('images/hero-bg.jpg');
   background-size: cover;
   background-position: center;
   height: 500px;
