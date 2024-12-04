@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   }, {
-    threshold: 0.4 // 40%が表示されたらトリガー
+    threshold: 0.3 // 40%が表示されたらトリガー
   });
 
   sectionsToAnimate.forEach(section => observer.observe(section));
